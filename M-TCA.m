@@ -27,7 +27,7 @@ function [X_src_new,X_tar_new,A] = M-TCA(X_src,Y_src,X_tar,Y_tar,options)
     
     M = M / norm(M,'fro');
 
-	%% Centering matrix H
+	%% Centering matrix H, Different from the original TCA
     E = [E;E];
     a = eye(feature); 
     b = repmat({a},n,1);
