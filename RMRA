@@ -14,7 +14,7 @@ Mlabel_t = [1 2 3 4];
 M_src =D;
 M_tar1 = M{1};
 
-options = struct('lambda',0.5,'dim',3,'kernel_type','primal','gamma',2,'data_feature',3); 
+options = struct('lambda',0.5,'dim',22,'kernel_type','primal','gamma',2,'data_feature',22); 
 
 [M_src_new1,M_tar_new1,A1] = M-TCA(M_src,Mlabel_s',M_tar1,Mlabel_t',options);
 toc
@@ -25,7 +25,7 @@ B1 = real(B1);
 M_src = D;
 M_tar2 = M{2};
 
-options = struct('lambda',0.5,'dim',3,'kernel_type','primal','gamma',2,'data_feature',3);  
+options = struct('lambda',0.5,'dim',22,'kernel_type','primal','gamma',2,'data_feature',22);  
 [M_src_new2,M_tar_new2,A2] = M-TCA(M_src,Mlabel_s',M_tar2,Mlabel_t',options);
 B2 = A2^(1/2);
 B2 = real(B2);
