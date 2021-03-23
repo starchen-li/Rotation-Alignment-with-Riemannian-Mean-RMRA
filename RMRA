@@ -11,13 +11,12 @@ end
 % D    = RiemannianMean(cat(3, M{1}, M{2}));
 Mlabel_s = [1 2 3 4];
 Mlabel_t = [1 2 3 4];
+
 M_src =D;
 M_tar1 = M{1};
 
 options = struct('lambda',0.5,'dim',22,'kernel_type','primal','gamma',2,'data_feature',22); 
-
 [M_src_new1,M_tar_new1,A1] = M-TCA(M_src,Mlabel_s',M_tar1,Mlabel_t',options);
-toc
 B1 = A1^(1/2);
 B1 = real(B1);
 [U1,R] =qr(B1);
